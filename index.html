@@ -23,16 +23,26 @@
     // 🧠 Example of usage:
     // buildPeter() // should return { firstName: "Peter", lastName: "Pan", age: 12 }
     function buildPeter() {
+      return {firstName: "Peter", lastName: "Pan", age: 12};
 
-    }
+
+    };
 
     // 👉 CHALLENGE 2:
     // 🧠 The function buildUser takes three arguments and uses them to build an object and return it.
     // 🧠 Example of usage:
     // buildUser("John", "Smith", 30) // should return { firstName: "John", lastName: "Smith", age: 30 }
     function buildUser(firstName, lastName, age) {
+      let result = {};
+      result.firstName = firstName
+      result.lastName = lastName
+      result.age = age
+
+      return result;
+      
 
     }
+
 
     // 👉 CHALLENGE 3:
     // 🧠 The function deletePrice takes an object as its argument and deletes its "price" property if it exists.
