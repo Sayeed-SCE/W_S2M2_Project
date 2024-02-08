@@ -52,7 +52,14 @@
     // 🧠 Examples of usage:
     // deletePrice({ item: "Tesla Model 3", price: 40000 }) // should return { item: "Tesla Model 3" }
     // deletePrice({ item: "Kobo Libra 2" }) // should return { item: "Kobo Libra 2", priceless: true }
-    function deletePrice() {
+    function deletePrice(obj) {
+      if(obj.price !== undefined){
+        delete obj.price
+      }else{
+        obj.priceless = true
+      }
+      return obj;
+
 
     }
 
@@ -63,7 +70,13 @@
     // evenList(['a']) // should return false
     // evenList(['a', 'b']) // should return true
     function evenList(arr) {
-
+      //return arr.length % 2 === 0;
+      let numOfElement = arr.length;
+      let isEven = numOfElement % 2 === 0;
+      if(isEven) {
+        return true
+      }
+        return false
     }
 
     // 👉 CHALLENGE 5
@@ -72,9 +85,13 @@
     // 🧠 Examples of usage:
     // firstOrLast(['a', 'b'], true) // should return 'a'
     // firstOrLast(['a', 'b'], false) // should return 'b'
-    function firstOrLast() {
-
+    function firstOrLast(arr, bool) {
+      if (bool){
+      return arr[0]
+      }
+      return arr [arr.length - 1];
     }
+
 
     // 👉 CHALLENGE 6
     // 🧠 The function pushElement takes an array as the first argument, and any value we wish as the second.
